@@ -3,7 +3,7 @@ import { Copy, Heart, Users, Utensils, Music } from 'lucide-react';
 import { Button } from '../components/Button';
 
 export const Contribute: React.FC = () => {
-  const pixKey = "00.000.000/0001-00"; // Placeholder
+  const pixKey = "80.460.678/0001-96"; 
 
   const handleCopyPix = () => {
     navigator.clipboard.writeText(pixKey);
@@ -81,7 +81,7 @@ export const Contribute: React.FC = () => {
             </p>
             <div className="pt-4">
               <Button 
-                href="https://forms.google.com" 
+                href="https://forms.gle/CXwv7ynBYowrtCZQA" 
                 target="_blank" 
                 variant="secondary"
                 className="w-full sm:w-auto"
