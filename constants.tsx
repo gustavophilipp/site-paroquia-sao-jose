@@ -15,7 +15,7 @@ export const COMMUNITIES: Community[] = [
     schedule: ['Todos os domingos às 19:30'],
     address: 'Forquilhas, São José - SC',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Igreja+Luterana+Forquilhas+São+José+SC',
-    image: '/imagens/forquilhas.png',
+    image: '/imagens/forquilhas.jpeg',
   },
   {
     id: 'picadas',
@@ -23,7 +23,7 @@ export const COMMUNITIES: Community[] = [
     schedule: ['Todas as terças-feiras às 19:30'],
     address: 'Picadas do Sul, São José - SC',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Igreja+Luterana+Picadas+São+José+SC',
-    image: '/imagens/picadas.png',
+    image: '/imagens/picadas.jpeg',
   },
   {
     id: 'colonia',
@@ -31,7 +31,7 @@ export const COMMUNITIES: Community[] = [
     schedule: ['Todos os domingos às 09:00'],
     address: 'Colônia Santana, São José - SC',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Colônia+Santana+São+José+SC',
-    image: '/imagens/colonia.png',
+    image: '/imagens/colonia.jpeg',
   },
 ];
 
@@ -47,11 +47,11 @@ export const PROJECTS: Project[] = [
       'Lanche comunitário',
       'Fortalecimento de vínculos'
     ],
-    image: 'https://picsum.photos/id/453/800/600',
+    videoUrl: 'https://youtu.be/tj_neYljBbs',
   },
   {
     id: 'colonia-santana',
-    name: 'Ação Social Colônia Santana',
+    name: 'Projeto CREIA - Colônia Santana',
     subtitle: 'Educação, Música e Esperança',
     description: 'Levamos esperança através do conhecimento e da arte para a zona rural. Acreditamos que a música e o reforço escolar são ferramentas divinas de transformação.',
     details: [
@@ -60,6 +60,6 @@ export const PROJECTS: Project[] = [
       'Louvor e histórias',
       'Atendimento em zona rural'
     ],
-    image: 'https://picsum.photos/id/447/800/600',
+    videoUrl: 'https://youtu.be/wtGdTEp3t2s',
   }
 ];
