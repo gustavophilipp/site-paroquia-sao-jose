@@ -1,6 +1,5 @@
 import React from 'react';
 import { BookOpen, Users, Globe, Cross, Mail, Phone } from 'lucide-react';
-import { IECLBLogo } from '../components/IECLBLogo';
 
 export const About: React.FC = () => {
   return (
@@ -29,7 +28,7 @@ export const About: React.FC = () => {
               <div className="absolute inset-0 bg-blue-100 rounded-full blur-2xl opacity-50 transform scale-110 group-hover:scale-125 transition-transform duration-500"></div>
               {/* Added bg-slate-50 to provide contrast for the white logo shape */}
               <div className="relative w-64 h-64 bg-slate-50 rounded-full flex items-center justify-center shadow-lg border-4 border-blue-50 group-hover:border-blue-100 transition-colors">
-                 <IECLBLogo className="w-48 h-48 drop-shadow-md" />
+                 <img src="/imagens/logo paróquia sj.png" alt="Logo Paróquia São José" className="w-48 h-48 drop-shadow-md rounded-full" />
               </div>
             </div>
           </div>
@@ -62,18 +61,18 @@ export const About: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Pastor 1 */}
+            {/* Pastor Joelson Martins */}
             <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 text-center group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
               <div className="w-40 h-40 mx-auto mb-6 relative">
                 <div className="absolute inset-0 bg-blue-100 rounded-full transform group-hover:scale-105 transition-transform duration-300"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop"
-                  alt="Pastor 1"
+                  src="/imagens/joelson.png"
+                  alt="Pastor Joelson Martins"
                   className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white shadow-md group-hover:border-blue-50 transition-colors"
                 />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-1">P. Nome do Pastor</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-1">P. Joelson Martins</h3>
               <p className="text-amber-500 font-medium mb-4 text-sm uppercase tracking-wide">Pastor Paroquial</p>
               <div className="flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                  <a href="#" className="p-2 bg-slate-100 rounded-full text-slate-600 hover:bg-blue-600 hover:text-white transition-colors">
@@ -85,18 +84,18 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Pastor 2 */}
+            {/* Pastora Marta Martins Schnaider */}
             <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 text-center group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
               <div className="w-40 h-40 mx-auto mb-6 relative">
                 <div className="absolute inset-0 bg-blue-100 rounded-full transform group-hover:scale-105 transition-transform duration-300"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop"
-                  alt="Pastora 2"
+                  src="/imagens/marta.png"
+                  alt="Pastora Marta Martins Schnaider"
                   className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white shadow-md group-hover:border-blue-50 transition-colors"
                 />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-1">Pa. Nome da Pastora</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-1">Pa. Marta Martins</h3>
               <p className="text-amber-500 font-medium mb-4 text-sm uppercase tracking-wide">Pastora</p>
                <div className="flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                  <a href="#" className="p-2 bg-slate-100 rounded-full text-slate-600 hover:bg-blue-600 hover:text-white transition-colors">
@@ -108,18 +107,18 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Pastor 3 */}
+            {/* Pastor Helton Hélio Kreutzfeld */}
             <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 text-center group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
               <div className="w-40 h-40 mx-auto mb-6 relative">
                 <div className="absolute inset-0 bg-blue-100 rounded-full transform group-hover:scale-105 transition-transform duration-300"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop"
-                  alt="Pastor 3"
+                  src="/imagens/helton.jpeg"
+                  alt="Pastor Helton Hélio Kreutzfeld"
                   className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white shadow-md group-hover:border-blue-50 transition-colors"
                 />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-1">P. Nome do Pastor</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-1">P. Helton Kreutzfeld</h3>
               <p className="text-amber-500 font-medium mb-4 text-sm uppercase tracking-wide">Pastor</p>
                <div className="flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                  <a href="#" className="p-2 bg-slate-100 rounded-full text-slate-600 hover:bg-blue-600 hover:text-white transition-colors">
