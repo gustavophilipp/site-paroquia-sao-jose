@@ -28,7 +28,7 @@ export const About: React.FC = () => {
               <div className="absolute inset-0 bg-blue-100 rounded-full blur-2xl opacity-50 transform scale-110 group-hover:scale-125 transition-transform duration-500"></div>
               {/* Added bg-slate-50 to provide contrast for the white logo shape */}
               <div className="relative w-64 h-64 bg-slate-50 rounded-full flex items-center justify-center shadow-lg border-4 border-blue-50 group-hover:border-blue-100 transition-colors">
-                 <img src="/imagens/logo paróquia sj.png" alt="Logo Paróquia São José" className="w-82 h-48 drop-shadow-md rounded-full " />
+                 <img src="/imagens/logo paróquia sj.png" alt="Logo Paróquia São José" className="w-100 h-48 drop-shadow-md rounded-full " />
               </div>
             </div>
           </div>
