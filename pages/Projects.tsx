@@ -1,8 +1,18 @@
 import React from 'react';
 import { PROJECTS } from '../constants';
 import { Button } from '../components/Button';
-import { CheckCircle, Music, BookOpen, Heart } from 'lucide-react';
+import { CheckCircle, Music, Heart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+
+// Helper function to convert YouTube URL to embed URL
+const getYouTubeEmbedUrl = (url: string): string => {
+  const youtubeRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/;
+  const match = url.match(youtubeRegex);
+  if (match && match[1]) {
+    return `https://www.youtube.com/embed/${match[1].split('&')[0]}`;
+  }
+  return url;
+};
 
 export const Projects: React.FC = () => {
   const navigate = useNavigate();
@@ -28,11 +38,27 @@ export const Projects: React.FC = () => {
             {/* Visual Side */}
             <div className="w-full lg:w-1/2 relative group">
               <div className="absolute inset-0 bg-amber-400 rounded-2xl transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
-              <img 
-                src={project.image} 
-                alt={project.name} 
-                className="relative rounded-2xl shadow-xl w-full h-96 object-cover z-10"
-              />
+              {project.videoUrl ? (
+                <div className="relative rounded-2xl shadow-xl w-full h-96 z-10 overflow-hidden bg-black">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src={getYouTubeEmbedUrl(project.videoUrl)} 
+                    title={project.name}
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              ) : (
+                <img 
+                  src={project.image} 
+                  alt={project.name} 
+                  className="relative rounded-2xl shadow-xl w-full h-96 object-cover z-10"
+                />
+              )}
               {project.id === 'colonia-santana' && (
                 <div className="absolute -bottom-6 -right-6 z-20 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3">
                   <div className="bg-red-100 p-2 rounded-full text-red-600">
@@ -77,23 +103,6 @@ export const Projects: React.FC = () => {
             </div>
           </div>
         ))}
-
-        {/* Video Highlight Section (Simulated) */}
-        <div className="bg-slate-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
-          <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-6">Veja o Impacto em Ação</h2>
-            <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-              Nossas crianças da Colônia Santana louvando e aprendendo. Um pequeno vislumbre do futuro que estamos construindo juntos.
-            </p>
-            {/* This would be the YouTube Embed in production */}
-            <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto bg-slate-800 rounded-xl flex items-center justify-center border border-slate-700 h-64 md:h-96">
-               <div className="text-center">
-                 <BookOpen className="h-12 w-12 text-slate-600 mx-auto mb-2" />
-                 <p className="text-slate-500">Vídeo do YouTube (Colônia Santana)</p>
-               </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
