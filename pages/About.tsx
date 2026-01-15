@@ -113,7 +113,7 @@ export const About: React.FC = () => {
               <div className="w-40 h-40 mx-auto mb-6 relative">
                 <div className="absolute inset-0 bg-blue-100 rounded-full transform group-hover:scale-105 transition-transform duration-300"></div>
                 <img
-                  src="/imagens/helton.jpeg"
+                  src="/imagens/helton.png"
                   alt="Pastor Helton Hélio Kreutzfeld"
                   className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white shadow-md group-hover:border-blue-50 transition-colors"
                 />
