@@ -93,7 +93,7 @@ export const Contribute: React.FC = () => {
           
           <div className="h-80 rounded-2xl overflow-hidden shadow-lg">
              <img 
-               src="https://picsum.photos/id/1059/800/800" 
+               src="/public/imagens/crianças.jpg" 
                alt="Voluntários trabalhando" 
                className="w-full h-full object-cover"
              />
