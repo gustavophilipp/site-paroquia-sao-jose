@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-amber-500 shrink-0" />
-                <span className="text-sm">administrador@ieclbcampinas.com.br</span>
+                <span className="text-sm">administrador@ieclbsaojose.org.br</span>
               </li>
             </ul>
           </div>
