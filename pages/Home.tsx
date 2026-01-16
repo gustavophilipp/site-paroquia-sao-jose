@@ -11,7 +11,7 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <section 
         className="relative bg-blue-900 text-white py-20 lg:py-32"
-        style={{ backgroundImage: "url('/imagens/fundo%20site.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: "url('/imagens/fundo-site-campinas.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         {/* Gradient Overlay - Adjusted to show the photo while keeping text readable */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-900/80 to-blue-900/60 z-0"></div>
