@@ -20,7 +20,7 @@ export const COMMUNITIES: Community[] = [
   {
     id: 'picadas',
     name: 'Comunidade de Picadas',
-    schedule: ['Todas as terças-feiras às 19:30'],
+    schedule: ['Todas as terças-feiras às 20:00'],
     address: 'Rua Brasil Machado, 47, Picadas do Sul, São José - SC',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Igreja+Luterana+Picadas+São+José+SC',
     image: '/imagens/picadas.jpeg',
@@ -28,7 +28,7 @@ export const COMMUNITIES: Community[] = [
   {
     id: 'colonia',
     name: 'Ponto de Pregação Colônia Santana',
-    schedule: ['Todos os domingos às 09:00'],
+    schedule: ['Primeiro e terceiro domingo às 9:30'],
     address: 'Estr. Geral Colonia Santana, 246, Colônia Santana, São José - SC',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Colônia+Santana+São+José+SC',
     image: '/imagens/colonia.jpeg',
