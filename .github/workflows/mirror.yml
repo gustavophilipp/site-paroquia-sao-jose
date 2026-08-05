@@ -1,0 +1,38 @@
+name: Mirror to backup repo
+
+on:
+  push:
+    branches:
+      - '**'
+  delete:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+      - name: Mirror push
+        env:
+          SRC_REPO: ${{ github.repository }}      # ex: gustavophilipp/apoio-ong-digital
+          BACKUP_REPO: ${{ github.repository }}-backup
+          TOKEN: ${{ secrets.MIRROR_TOKEN }}
+        run: |
+          set -e
+          git config user.name  "mirror-bot"
+          git config user.email "mirror@users.noreply.github.com"
+          # ajusta remote pra apontar pro repo *-backup usando o token
+          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${BACKUP_REPO}.git"
+          git fetch --unshallow origin 2>/dev/null || true
+          # espelha todas as refs (branches + tags)
+          git push --mirror origin
+          echo "Mirror de ${SRC_REPO} -> ${BACKUP_REPO} concluído."
